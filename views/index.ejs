@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Ordering System</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🍔 Food Ordering System</h1>
+        <p>Choose your favorite food!</p>
+
+        <a href="/add" class="button">
+            + Add Food
+        </a>
+    </header>
+
+    <div class="food-grid">
+
+        <% foods.forEach(food => { %>
+
+            <div class="card">
+
+                <h2><%= food.name %></h2>
+
+                <p class="category">
+                    <%= food.category %>
+                </p>
+
+                <h3>₱<%= food.price %></h3>
+
+                <% if (food.available) { %>
+                    <p class="available">Available</p>
+                <% } else { %>
+                    <p class="unavailable">Not Available</p>
+                <% } %>
+
+                <div class="actions">
+
+                    <% if (food.available) { %>
+                        <a href="/order/<%= food.id %>" class="button">
+                            Order
+                        </a>
+                    <% } %>
+
+                    <a href="/edit/<%= food.id %>" class="edit-button">
+                        Edit
+                    </a>
+
+                    <form action="/delete/<%= food.id %>"
+                          method="POST"
+                          style="display:inline;">
+
+                        <button
+                            type="submit"
+                            class="delete-button"
+                            onclick="return confirm('Delete this food?')">
+                            Delete
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        <% }) %>
+
+    </div>
+
+</div>
+
+</body>
+</html>

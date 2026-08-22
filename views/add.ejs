@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Food</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="form-card">
+
+        <h1>Add New Food</h1>
+
+        <form action="/add" method="POST">
+
+            <label>Food Name</label>
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter food name"
+                required
+            >
+
+            <label>Category</label>
+            <input
+                type="text"
+                name="category"
+                placeholder="e.g. Burger"
+                required
+            >
+
+            <label>Price</label>
+            <input
+                type="number"
+                name="price"
+                placeholder="Enter price"
+                min="1"
+                required
+            >
+
+            <label>Availability</label>
+
+            <select name="available">
+
+                <option value="true">
+                    Available
+                </option>
+
+                <option value="false">
+                    Not Available
+                </option>
+
+            </select>
+
+            <button type="submit" class="button">
+                Add Food
+            </button>
+
+            <a href="/" class="back-button">
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
