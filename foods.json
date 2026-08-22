@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Cheeseburger",
+    "category": "Burger",
+    "price": 120,
+    "available": true
+  },
+  {
+    "id": 2,
+    "name": "Pepperoni Pizza",
+    "category": "Pizza",
+    "price": 250,
+    "available": true
+  },
+  {
+    "id": 3,
+    "name": "French Fries",
+    "category": "Side Dish",
+    "price": 80,
+    "available": true
+  },
+  {
+    "id": 4,
+    "name": "Chicken Sandwich",
+    "category": "Sandwich",
+    "price": 150,
+    "available": true
+  }
+]
